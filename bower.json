@@ -1,0 +1,19 @@
+{
+    "name": "e-countdown",
+    "version": "0.0.0",
+    "description": "Simple Countdown",
+    "license": "MIT",
+    "main": "index.html",
+    "keywords": [
+        "polymer",
+        "web-components"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#^0.4.1"
+    }
+}

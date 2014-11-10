@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Countdown</title>
+
+    <!-- Importing Web Component's Polyfill -->
+    <script src="bower_components/platform/platform.js"></script>
+
+    <!-- Importing Custom Elements -->
+    <link rel="import" href="elements/simple-countdown.html">
+</head>
+<body>
+
+    <!-- Using Custom Elements -->
+    <simple-countdown start="10"></simple-countdown>
+</body>
+
+<script>
+
+var c = document.querySelector('simple-countdown');
+
+c.addEventListener('oncomplete', function(){
+	console.log('my callback!');
+});
+
+</script>
+</html>

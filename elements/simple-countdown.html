@@ -1,0 +1,34 @@
+<!-- Import Polymer -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- Define your custom element -->
+<polymer-element name="simple-countdown" attributes="start">
+    <template>
+        <span>{{start}}</span>
+    </template>
+    <script>
+    Polymer('simple-countdown', {
+
+        //set default
+        start: 10,
+
+        // Fires when the "<polymer-element>" has been fully prepared
+        ready: function() {
+            var intervalo,
+                count = this.start;
+
+            intervalo = setInterval(function() {
+                this.start = --count;
+                if (!count) {
+                    clearInterval(intervalo);
+                    return this.fire('oncomplete');
+                }
+
+            }.bind(this), 1000)
+
+        }
+
+    });
+    </script>
+
+</polymer-element>
